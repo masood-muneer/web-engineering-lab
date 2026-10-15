@@ -1,5 +1,11 @@
-function greet(name) {
+export function greet(name) {
     return `Hello, ${name}!`;
 }
 
-document.getElementById("greeting").textContent = greet("Masood");
+if (typeof document !== "undefined") {
+    const heading = document.getElementById("greeting");
+
+    if (heading) {
+        heading.textContent = greet("Masood");
+    }
+}
