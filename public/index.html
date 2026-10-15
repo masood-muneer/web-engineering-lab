@@ -1,32 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Engineering Lab</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <a href="#main">Skip to main content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
-        <h1 id="greeting"></h1>
-        <nav>
-            <ul>
-            <li><a href="#schedule">office hours</a></li>
-            <li><a href="#feedback">send feedback</a></li>
+      <h1 id="greeting"></h1>
+
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="#office-hours"
+              class="nav-link"
+              aria-current="location"
+            >
+              Office Hours
+            </a>
+          </li>
+
+          <li>
+            <a href="#feedback" class="nav-link">
+              Send Feedback
+            </a>
+          </li>
         </ul>
-        </nav>
-        <td>Monday</td>
-          <td><time datetime="09:63">9:45 AM</time> - <time datetime="11:00">11:45 AM</time></td>
-        </tr>
-        
-        <main id="main-content">
-            <figure>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="office-hours">
+        <h2>Office Hours</h2>
+
+        <table>
+          <caption>Weekly Office Hours</caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>
+                <time datetime="09:00">9:00 AM</time> -
+                <time datetime="11:00">11:00 AM</time>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <figure>
           <svg
             role="img"
             viewBox="0 0 24 24"
-            width="30"
-            height="30"
+            width="20"
+            height="48"
             aria-labelledby="location-title"
           >
             <title id="location-title">Office location</title>
@@ -48,9 +87,12 @@
             ></circle>
           </svg>
 
-          <figcaption>All office hours are held in Room 2026.</figcaption>
+          <figcaption class="text-muted">
+            All office hours are held in Room 214.
+          </figcaption>
         </figure>
       </section>
+
       <svg
         aria-hidden="true"
         width="100%"
@@ -66,54 +108,84 @@
           stroke="currentColor"
           stroke-width="2"
         ></line>
+      </svg>
+
+      <section id="feedback">
         <h2>Send Feedback</h2>
 
-  <form>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" />
+        <form>
+          <p>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+          </p>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" />
-  </form>
-</section>
-<form>
+          <p>
+            <label for="email">Email:</label>
 
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-describedby="email-hint"
+            />
 
+            <small id="email-hint" class="text-muted">
+              Please enter a valid email address.
+            </small>
+          </p>
 
+          <fieldset>
+            <legend>Topic</legend>
 
-  <fieldset>
-    <legend>Topic</legend>
+            <label>
+              <input
+                type="radio"
+                name="topic"
+                value="general"
+                required
+              />
+              General Inquiry
+            </label>
 
-    <label>
-      <input type="radio" name="topic" value="general" />
-      General Inquiry
-    </label>
+            <label>
+              <input
+                type="radio"
+                name="topic"
+                value="lab"
+              />
+              Lab Question
+            </label>
+          </fieldset>
 
-    <label>
-      <input type="radio" name="topic" value="lab" />
-      Lab Question
-    </label>
-  </fieldset>
+          <label for="message">Message</label>
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message"></textarea>
+          <textarea
+            id="message"
+            name="message"
+            required
+          ></textarea>
 
-  <button type="submit">Submit</button>
-</form>
-
-    </main>   
-     <tr>
-      
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
 
     <footer>
       <address>
-        Contact: <a href="mailto:masoodmuneer0@gmail.com">masoodmuneer0@gmail.com</a>
+        Contact:
+        <a href="mailto:muhammadmasood0@gmail.com">
+          muhammadmasood0@gmail.com
+        </a>
       </address>
     </footer>
-    </header>
-    <main id="main">
 
-    </main>
     <script type="module" src="script.js"></script>
-</body>
+  </body>
 </html>
+
