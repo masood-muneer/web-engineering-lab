@@ -1,4 +1,4 @@
-import { delay, makeCounter } from "./utils.js";
+import { delay, makeCounter } from ". /utils.js";
 const status = document.querySelector("#status");
 const tbody = document.querySelector("#schedule tbody");
 const nextBooking = makeCounter();

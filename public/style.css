@@ -50,7 +50,16 @@
       var(--color-text) 55%,
       var(--color-bg)
     );
+     --color-error: light-dark(oklch(45% 0.2 25), oklch(75% 0.15 25));
   }
+  .error {
+  display: block;
+  color: var(--color-error);
+}
+
+input[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
 
   body {
     font-family: system-ui, sans-serif;
